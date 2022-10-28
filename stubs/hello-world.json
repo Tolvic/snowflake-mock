@@ -1,0 +1,24 @@
+{
+    "predicates": [
+        {
+            "equals": {
+                "method": "POST",
+                "path": "/api/hello-world"
+            }
+        }
+    ],
+    "responses": [
+        {
+        "is": {
+            "statusCode" : 200,
+            "headers": {
+                    "Content-Type": "application/json"
+                },
+            "body": {
+                "message": "Hello World!"
+                }
+            }
+        }
+    ]
+}
+

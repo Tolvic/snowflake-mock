@@ -1,0 +1,19 @@
+{ "imposters" : [{
+    "port": 1000,
+      "protocol": "http",
+      "name": "Snowflake mocking",
+      "stubs": [ 
+        <% include stubs/bad-request.json %>,
+        <% include stubs/hello-world.json %>,
+        <% include stubs/sales-volume-1.json %>,
+        <% include stubs/sales-volume-2.json %>
+    ],
+    "defaultResponse":{
+    "statusCode": 404,
+    "headers": {
+        "connection": "close"
+        },
+    "body": "Not Found"
+    }
+  }]
+}

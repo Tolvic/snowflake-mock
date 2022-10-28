@@ -1,0 +1,23 @@
+{
+    "predicates": [
+        {
+            "and":[
+               {"contains": { "path": "/api/"  }},
+               {"not": { "contains": {"body": "database"} }}
+            ]
+        }
+    ],
+    "responses": [
+        {
+            "is": {
+                "statusCode" : 400,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "message": "Bad Request"
+                  }
+                }
+            }
+        ]
+}
